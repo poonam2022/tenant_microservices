@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home</title>
+</head>
+<body>
+hello {{user}}
+<br>
+your tenant is {{t_username}}
+<br>
+your tenant's services are
+{% for service in services %}
+<!-- <a href="http://127.0.0.1:8000/api/{{tid}}/book/{{service[0]}}/1">{{service[0]}} </a> -->
+<a href="http://127.0.0.1:8000/{{service[0]}}/{{t_username}}">{{service[0]}}</a>
+{%endfor%}
+ <a href="http://127.0.0.1:8000/logout"><button> logout </button></a>
+<br>
+</body>
+</html>
